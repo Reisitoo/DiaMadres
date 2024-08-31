@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Para Mamá</title>
+    <link rel="stylesheet" href="./Estilos/styles.css">
+    <link rel="shortcut icon" href="imagenes/iconmama.bmp" type="bmp" sizes="16x16">
+</head>
+<body>
+    <header class="main-header">
+        <nav>
+            <ul>
+                <li class="pageabierta">
+                    <a href="index.html">Carta</a>
+                </li>
+                <li>
+                    <a href="./paginas/pagina1.html">Pagina 1</a>
+                </li>
+                <li>
+                    <a href="./paginas/poema.html">Poema</a>
+                </li>
+                <li>
+                    <a href="./paginas/galeriafotos.html">Fotos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="center">
+        <div class="card">
+            <div class="card-body front">
+                <div class="title">
+                    <p class="titulo">Feliz Dia de La Madre</p>
+                    <p>
+                        Feliz dia de la madre, a la mejor mamá del mundo.<br>
+                        Te quiero mucho y este detalle es para vos mamá.<br>
+                        Quizás no sea el mejor regalo, pero lo hice con mucho cariño, espero que te guste.
+                    </p>
+                </div>
+            </div>
+            <div class="card-body back">
+                <div class="content">
+                    <p><font size="5">
+                        Esto es solo el comienzo.<br> Para ver lo demas que contiene tu regalo, presiona el boton de abajo.
+                    </font></p>
+                    <a class="btn" href="./paginas/pagina1.html"><element class="textoa">Continuar</element></a>
+                </div>
+            </div>
+        </div>
+        <div class="options">
+            <button id="voltear">Voltear</button>
+            <button id="desvoltear">Desvoltear</button>
+        </div>
+    </div>
+    <footer class="pata">Carlos Reinaldo Sánchez Rodriguez 12 BTP Informática Sección 1</footer>
+    <script>
+        const btnvoltearElement = document.querySelector('#voltear')
+        const btndesvoltearElement = document.querySelector('#desvoltear')
+
+        btndesvoltearElement.disabled = true
+
+        btnvoltearElement.addEventListener('click', ()=>{
+            btnvoltearElement.disabled = true
+            btndesvoltearElement.disabled  = false
+            setTimeout(() => {
+                const voltearElement = document.querySelector('.card')
+            voltearElement.classList.add('voltear')
+            voltearElement.classList.remove('desvoltear')
+            }, 200);
+
+        })
+        
+        btndesvoltearElement.addEventListener('click', ()=>{
+            btnvoltearElement.disabled = false
+            btndesvoltearElement.disabled  = true
+        setTimeout(() => {
+            const voltearElement = document.querySelector('.card')
+            voltearElement.classList.add('desvoltear')
+            voltearElement.classList.remove('voltear')
+        }, 200);
+        })
+    </script>
+</body>
+</html>

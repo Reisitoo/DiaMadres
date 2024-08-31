@@ -1,0 +1,126 @@
+:root {
+    --fondo1: #fcf6d2;
+	--letra1: #fbe2b9;
+	--fondo2: #c6c39a;
+	--letra2: #281f20;
+	--verde: #309402;
+	--blanco: #ffffff; 
+}
+ 
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo1);
+    color: var(--letra2);
+    font-family: Cambria;
+    font-size: 1.5rem;
+}
+
+/*-----------------Barra de Navegación-----------*/
+.main-header {
+    background-color: var(--letra2);
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    font-size: 3rem;
+    z-index: 2;
+}
+.main-header a {
+    color: var(--blanco);
+}
+nav {
+    float: center;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-left: 0px;
+    font-size: 2rem;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin-left: 20px;
+}
+nav ul li a{
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;   
+}
+nav ul li a:hover {
+    background: rgba(228, 255, 222, 0.514);   
+}
+
+.pageabierta {
+    background-color: rgba(255, 255, 255, 0.301);
+}
+/*------------------------------------------------------*/
+
+/*----------------------Contenido--------------------*/
+.content{
+	animation: animar 1s ease-in-out forwards;
+}
+@keyframes animar {
+	0%{
+		transform: scale(0.8);
+		opacity: 0.5;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+.content {
+    padding: 50px;
+    display: block;
+    height: 1004px;
+    width: 690px;
+    background-image: url(../Imagenes/FondoPoemawowm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 150px auto;
+    padding: 0;
+    text-align: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 80px var(--letra2);
+    z-index: 1;
+}
+
+.TextPoema {
+    display: block;
+    background: #281f207c;
+    border-radius: 2rem;
+    letter-spacing: 1px;
+    line-height: 3.2rem;
+    font-weight: 500;
+    color: var(--blanco);
+    max-width: 100%;
+    width: 690px;
+    height: 1004px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*------------------------------------------------------*/
+
+
+/*--------------Pie de la Pagina-------------------------*/
+.pata{
+    background-color: #00000079;
+    color: var(--fondo2);
+    height: auto;
+	padding: 7px;
+    width: auto;
+	margin-top: 100px;
+    font-size: 1.5rem;
+	z-index: 1;
+	text-align: center;
+}
+/*-----------------------------------------------------------*/

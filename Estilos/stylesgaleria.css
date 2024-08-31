@@ -1,0 +1,140 @@
+:root{
+	--fondo1: #fcf6d2;
+	--letra1: #fbe2b9;
+	--fondo2: #c6c39a;
+	--letra2: #281f20;
+	--verde: #309402;
+	--blanco: #ffffff; 
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo2);
+    color: var(--letra2);
+    font-family: Cambria;
+    font-size: 2rem;
+}
+
+.content {
+    padding: 50px;
+    width: 50%;
+    line-height: 2rem;
+    background-color: var(--fondo1);
+    box-shadow: 0px 0px 20px var(--letra2);
+    margin: 150px auto;
+    text-align: justify;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+
+/*Barra De Navegación*/
+
+.main-header {
+    background-color: var(--letra2);
+    color: var(--letra1);
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    font-size: 3rem;
+    z-index: 2;
+}
+.main-header a {
+    color: var(--blanco);
+}
+nav {
+    float: center;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-left: 0px;
+    font-size: 2rem;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 50px;
+    margin-left: 20px;
+}
+nav ul li a{
+    display: block;
+    padding: 0 10px;
+    text-decoration: none;   
+}
+nav ul li a:hover {
+    background: rgba(228, 255, 222, 0.514);   
+}
+
+.pageabierta {
+    background-color: rgba(255, 255, 255, 0.301);
+}
+
+/*----------*/
+
+/*-------------Fotos----------------------*/
+
+.foto{
+    max-width: 50%;
+    margin: 20px 50px;
+    padding: 0px;
+    border: 2px solid #C4AD5A;
+}
+.contentimg{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.content{
+	animation: content 1s ease-in-out forwards;
+}
+@keyframes content {
+	0%{
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+
+.foto{
+	animation: animar 1.5s ease-in-out forwards;
+}
+@keyframes animar {
+	0%{
+		transform: scale(0.9);
+		opacity: 0;
+	}
+    50%{
+        opacity: 0.3;
+    }
+	100%{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+/*-------------------------------------------*/
+
+
+/*--------------Pie de la Pagina-------------------------*/
+.pata{
+    background-color: #00000079;
+    color: var(--fondo2);
+    height: auto;
+	padding: 7px;
+    width: auto;
+	margin-top: 100px;
+    font-size: 1.5rem;
+	z-index: 1;
+	text-align: center;
+}
+/*-----------------------------------------------------------*/
